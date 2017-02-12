@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <TemplateType>
+        <ID>1</ID>
+        <Version>1.0</Version>
+        <Name>Financial</Name>
+    </TemplateType>
+    <Template>
+        <ID>1</ID>
+        <Version>1.0</Version>
+        <TypeID>1</TypeID>
+        <AddressInfo>VM-FROMSC</AddressInfo>
+        <AddressData>Standard Chartered Credit Card</AddressData>
+        <Info>[{propernoun1}] you for using [{propernoun2}] XX[{integer1}] on [{date1}] for [{currency1}] [{decimal1}]. [{propernoun3}] check [{propernoun4}] eligibility on spends above [{currency2}][{integer2}], log on to m.sc.com/in -[{propernoun5}].</Info>
+        <Data>[{propernoun1}] you for using [{propernoun2}] XX[{integer1::accountnumber}] on [{date1::date}] for [{currency1::currency}] [{decimal1::amount}]. [{propernoun3}] check [{propernoun4}] eligibility on spends above [{currency2}][{integer2}], log on to m.sc.com/in -[{propernoun5}].</Data>
+    </Template>
+    <Template>
+        <ID>2</ID>
+        <Version>1.0</Version>
+        <TypeID>1</TypeID>
+        <AddressInfo>VK-HDFCBK</AddressInfo>
+        <AddressData>HDFC Bank Debit Card</AddressData>
+        <Info>[{propernoun1}] you for using [{propernoun2}] ending [{integer1}] for [{currency1}][{decimal1}] in [{propernoun3}] at [{propernoun4}] on [{date1}]:[{time1}]  [{propernoun5}] bal: [{currency2}][{decimal2}]</Info>
+        <Data>[{propernoun1}] you for using [{propernoun2}] ending [{integer1::accountnumber}] for [{currency1::currency}][{decimal1::amount}] in [{propernoun3::location}] at [{propernoun4::smslocationname}] on [{date1::date}]:[{time1::time}]  [{propernoun5}] bal: [{currency2}][{decimal2::balance}]</Data>
+    </Template>
+    <Regex>
+        <ID>1</ID>
+        <Version>1.0</Version>
+        <Type>currency</Type>
+        <Expression>([rR][sS][\.]?|[iI][nN][rR][\.]?)</Expression>
+        <PlaceHolder>currency</PlaceHolder>
+        <Weight>100000</Weight>
+    </Regex>
+    <Regex>
+        <ID>2</ID>
+        <Version>1.0</Version>
+        <Type>date</Type>
+        <Expression>((\d{2})[/-](([01][0-9])|([A-Za-z]{3}))[/-]((\d{4})|(\d{2})))|(((\d{4})|(\d{2}))[/-](([01][0-9])|([A-Za-z]{3}))[/-](\d{2}))</Expression>
+        <PlaceHolder>date</PlaceHolder>
+        <Weight>10000</Weight>
+    </Regex>
+    <Regex>
+        <ID>3</ID>
+        <Version>1.0</Version>
+        <Type>time</Type>
+        <Expression>(\d{2}:\d{2}(:\d{2})?)</Expression>
+        <PlaceHolder>time</PlaceHolder>
+        <Weight>1000</Weight>
+    </Regex>
+    <Regex>
+        <ID>4</ID>
+        <Version>1.0</Version>
+        <Type>decimal</Type>
+        <Expression>(\d{1,3}(,\d{2,3})+(\.\d{1,2})?)|(\d+(\.\d{1,2}))</Expression>
+        <PlaceHolder>decimal</PlaceHolder>
+        <Weight>100</Weight>
+    </Regex>
+    <Regex>
+        <ID>5</ID>
+        <Version>1.0</Version>
+        <Type>integer</Type>
+        <Expression>(\d+)(?!\}\])</Expression>
+        <PlaceHolder>integer</PlaceHolder>
+        <Weight>10</Weight>
+    </Regex>
+    <Regex>
+        <ID>6</ID>
+        <Version>1.0</Version>
+        <Type>propernoun</Type>
+        <Expression>(?&lt;=^|\s|[`'’\"^,;:—\-\\\*\.\(\)\[\]\n])((?!X{2,}\[\{)[A-Z]+.*?)(?=\s+[a-z\W]|[`'’\"^,;:—\-\\\*\.\(\)\[\]\n]|\s*X{2,}\[\{)</Expression>
+        <PlaceHolder>propernoun</PlaceHolder>
+        <Weight>1</Weight>
+    </Regex>
+</resources>

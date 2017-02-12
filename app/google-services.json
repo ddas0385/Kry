@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "251789381817",
+    "project_id": "firebase-kroy"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251789381817:android:146baaa105dedc97",
+        "android_client_info": {
+          "package_name": "com.kri.kry"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnqqneJe23v1rkMTL-ssKs78VOwwn1xsE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
