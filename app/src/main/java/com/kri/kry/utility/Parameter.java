@@ -31,4 +31,7 @@ public class Parameter {
     public static final String FinancialTransactionTypeDebit = "Debit";
     public static final String FinancialTransactionTypeCredit = "Credit";
 
+    //Firebase Cloud Messaging Topic
+    public static final String FCMTopic = "FinancialTopic";
+
 }

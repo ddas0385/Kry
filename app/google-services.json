@@ -1,7 +1,9 @@
 {
   "project_info": {
     "project_number": "251789381817",
-    "project_id": "firebase-kroy"
+    "firebase_url": "https://fir-kroy.firebaseio.com",
+    "project_id": "firebase-kroy",
+    "storage_bucket": "firebase-kroy.appspot.com"
   },
   "client": [
     {
@@ -11,7 +13,16 @@
           "package_name": "com.kri.kry"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "251789381817-a0psb22kl9gd0svgvh88j49c5fpjhdls.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "251789381817-jr18q8e0m7322ufqh47u9ndoln3i3i32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAnqqneJe23v1rkMTL-ssKs78VOwwn1xsE"
@@ -26,7 +37,7 @@
           "other_platform_oauth_client": []
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
